@@ -12,7 +12,7 @@ else:
     multiply = int(input("Введите произведение чисел: "))
     if (sum - multiply == 1):
         print(f"Первое число = {multiply}, второе число = {1}")
-    if (multiply == 0):
+    elif (multiply == 0):
         print(f"Первое число = {0}, второе число = {sum}")
     else:
         flag = True
@@ -28,4 +28,8 @@ else:
                 flag = False
             else:
                 count += 1
-        print(f"Первое число = {first_number}, второе число = {second_number}")
+        if (first_number == 0 and second_number == 0):
+            print("Такой пары натуральных чисел не существует")
+        else:
+            print(
+                f"Первое число = {first_number}, второе число = {second_number}")
