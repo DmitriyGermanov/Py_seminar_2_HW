@@ -6,8 +6,10 @@
 number_of_coins = int(input("Введите количество монет: "))
 if (number_of_coins == 1):
     print("На столе лежит одна монета")
+elif (number_of_coins == 0):
+    print("На столе ни лежит не одной монеты")
 else:
-    count = 1
+    count = 10
     coin_heads = 0
     coin_tails = 0
     for i in range(number_of_coins):
