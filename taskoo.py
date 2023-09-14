@@ -4,29 +4,30 @@
 # Выведите минимальное количество монет, которые нужно перевернуть
 
 number_of_coins = int(input("Введите количество монет: "))
-count = 1
-coin_heads = 0
-coin_tails = 0
-for i in range(number_of_coins):
-    coin_location = 3
-    while (coin_location < -1 or coin_location > 1):
-        coin_location = int(
-            input(f"Введите положение монеты {count} (0 - решка, 1 - орел): "))
-        if (coin_location != 0 and coin_location != 1):
-            print("Введите корректное положение монеты")
-        else:
-            count += 1
-    if (coin_location == 1):
-        coin_heads += 1
-    else:
-        coin_tails += 1
-if (count == 1):
+if (number_of_coins == 1):
     print("На столе лежит одна монета")
-elif (coin_heads == 0 or coin_tails == 0):
-    print("Все монеты лежат на одной стороне")
-elif (coin_heads < coin_tails):
-    print(
-        f"Минимальное количество монет, которые нужно перевернуть = {coin_heads}")
 else:
-    print(
-        f"Минимальное количество монет, которые нужно перевернуть = {coin_tails}")
+    count = 1
+    coin_heads = 0
+    coin_tails = 0
+    for i in range(number_of_coins):
+        coin_location = 3
+        while (coin_location < -1 or coin_location > 1):
+            coin_location = int(
+                input(f"Введите положение монеты {count} (0 - решка, 1 - орел): "))
+            if (coin_location != 0 and coin_location != 1):
+                print("Введите корректное положение монеты")
+            else:
+                count += 1
+        if (coin_location == 1):
+            coin_heads += 1
+        else:
+            coin_tails += 1
+    if (coin_heads == 0 or coin_tails == 0):
+        print("Все монеты лежат на одной стороне")
+    elif (coin_heads < coin_tails):
+        print(
+            f"Минимальное количество монет, которые нужно перевернуть = {coin_heads}")
+    else:
+        print(
+            f"Минимальное количество монет, которые нужно перевернуть = {coin_tails}")
