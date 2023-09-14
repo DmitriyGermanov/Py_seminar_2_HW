@@ -9,7 +9,7 @@ if (number_of_coins == 1):
 elif (number_of_coins == 0):
     print("На столе не лежит ни одной монеты")
 else:
-    count = 10
+    count = 1
     coin_heads = 0
     coin_tails = 0
     for i in range(number_of_coins):
